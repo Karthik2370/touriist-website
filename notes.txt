@@ -1,0 +1,16 @@
+1) Node.js is a javascript framework which is used to write the backend code of a website and connect any databases or call external
+API's. It is just like PHP, but it is much more recent and hence we are using this instead of php because php is outdated.
+
+2) Express.js is a node.js which helps to organize the code in node.js and it makes it easy for us to code web applications.
+Basically what express.js does is, it already has a lot of functions so it shortens the amount of code we write in node, hence saving
+us time.
+
+3) In order to use any type of a module or a framework in node.js, you have to first install it using "npm install <package name> 
+and to use it on your app, you use "require".
+
+4) "get" basically means that you get some route or request some route. The default route is the home route which is also 
+represented by a simple slash "/" . You can make as many routes as you want. For example "/about" or "/contact" . Ofcourse you will
+have to write a get request for each and every route you have.
+
+5) Axios is basically used to call API's. Axio's gives the ability to get the data available in any API and render it to our 
+website.
