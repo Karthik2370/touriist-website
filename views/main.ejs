@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- IMOPRTING STYLES.CSS -->
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- IMPORTING JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- IMPORTING FONTS FROM GOOGLE -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Paytone+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c7712fda9c.js" crossorigin="anonymous"></script>
+ </head>
+</head>
+<body>
+    <%- include('./partials/navigation.ejs'); %>
+
+    <section id="main" class="pt-24 p-4 sm:p-10 sm:h-screen sm:pt-32">
+        <a href="<%- link %>"><h1 class="text-center font-bold text-4xl sm:text-6xl hover:text-white cursor-pointer"><%- cityname %></h1></a>
+        <p class="text-lg text-center font-small sm:font-medium mt-4"><%- city_description %></p>
+        <div class="stats flex flex-col items-center justify-center sm:flex-row sm:justify-evenly pt-8">
+
+            <div class="weather-card bg-white p-2 rounded-lg flex flex-col justify-center items-center mt-6 sm:mt-0 ">
+                    <p class="font-medium text-md">overall weather</p>
+                    <img src="<%- weatherimg %>" alt="">
+                    <p><%- weatherdesc %></p>
+                    <p><%- temperature %>°C</p>
+            </div>
+
+            <div class="map-card flex flex-col justify-center items-center mt-8 sm:mt-0">
+                <img class="rounded-lg map-img" src="https://i.imgur.com/YBNuGg1.jpeg" alt="">
+                <a href="<%- maplink %>" target="__blank"><button class="bg-white flex flex-row p-2 rounded-md text-center mt-8 "><img src="https://i.imgur.com/whu7R4g.png" alt="" class="map-logo">View on Maps</button></a>
+            </div>
+        </div>
+
+        <div class="scroll-logo flex items-center justify-center">
+            <a href="#explore"><i class="fas fa-arrow-down mt-16 sm:mt-16 text-center"></i></a>
+        </div>
+
+
+    </section>
+
+    <section id="explore">
+        <div class="places text-black sm:text-white">
+            <h1 class="text-lg sm:text-4xl font-bold pt-10 sm:pt-20 text-center">━━━━ Top Places to Visit ━━━━</h1>
+            <div class="food-container flex flex-col justify-center items-center sm:flex-row sm:justify-evenly pb-20 p-4 sm:p-0">
+                    <div class="food-card flex flex-col items-center mt-10 sm:mt-20">
+                        <img src="<%- place1_img %>" alt="">
+                        <p class="font-semibold text-xl"><%- place1 %></p>
+                    </div>
+
+                    <div class="food-card flex flex-col items-center mt-10 sm:mt-20">
+                        <img src="<%- place2_img %>" alt="">
+                        <p class="font-semibold text-xl"><%- place2 %></p>
+                    </div>
+
+                    <div class="food-card flex flex-col items-center mt-10 sm:mt-20">
+                        <img src="<%- place3_img %>" alt="">
+                        <p class="font-semibold text-xl"><%- place3 %></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="foods text-black sm:text-white">
+            <h1 class="text-lg sm:text-4xl font-bold pt-10 sm:pt-20 text-center">━━━━ Top Favourite Food ━━━━</h1>
+            <div class="food-container flex flex-col justify-center items-center sm:flex-row sm:justify-evenly p-4 sm:p-0 sm:pb-20">
+                    <div class="food-card flex flex-col items-center mt-10 sm:mt-20">
+                        <img src="<%- food1_img %>" alt="">
+                        <p class="font-semibold text-xl"><%- food1 %></p>
+                    </div>
+
+                    <div class="food-card flex flex-col items-center mt-10 sm:mt-20">
+                        <img src="<%- food2_img %>" alt="">
+                        <p class="font-semibold text-xl"><%- food2 %></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('./partials/footer.ejs'); %>
+
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+        <h1 class="text-xl text-white ml-10">Fetching Data</h1>
+    </div>
+
+    
+    <script src="index.js"></script>
+</body>
+</html>

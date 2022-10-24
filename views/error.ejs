@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <!-- IMPORTING TAILWIND -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- IMOPRTING STYLES.CSS -->
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- IMPORTING JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- IMPORTING FONTS FROM GOOGLE -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Paytone+One&display=swap" rel="stylesheet"><body>
+ </head>
+ <body>
+    <section id="error">
+        <%- include('./partials/navigation.ejs'); %>
+
+        <div class="flex flex-col items-center justify-center">
+            <h1 class="text-3xl text-black text-center font-bold pt-20">Oops! We could not find that city in the database of our API. Please wait for more cities to be added in or suggest new cities in contact us section.</h1>
+
+            <form action="/error" method="post">
+                <button class="bg-white p-2 font-medium text-lg rounded-md mt-20">Back to Home</button>
+            </form>
+        </div>
+
+
+    </section>
+ </body>

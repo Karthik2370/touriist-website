@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <!-- IMPORTING TAILWIND -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- IMOPRTING STYLES.CSS -->
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- IMPORTING JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- IMPORTING FONTS FROM GOOGLE -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Paytone+One&display=swap" rel="stylesheet"><body>
+ </head>
+ <body class="sm:overflow-hidden">
+    <!-- START OF HERO SECTION -->
+
+    <!-- IMPORTING THE NAVIGATION BAR -->
+    <%- include('./partials/navigation.ejs'); %>
+
+    <section id="hero" class="sm:p-4 pt-16">
+        <div>
+            <h1 class="text-6xl pt-20 sm:ml-12 text-center sm:text-left">DeTour</h1>
+            <p class="text-white text-xl sm:text-2xl  font-bold mt-5 sm:ml-12 text-center sm:text-left">“To travel is to evolve.” - Pierre Bernardo
+            </p>
+        </div>
+        
+        <div class="btn-container flex flex-col sm:flex-row items-center justify-center">
+            <form action="/city" method="post">
+                <input type="text" placeholder="Enter destination Name" name="city__name" class="w-64 sm:w-96 p-3 sm:p-4 shadow-2xl rounded-lg sm:rounded-sm">
+                <button class="bg-gray-300 p-2 sm:p-3 rounded-md sm:ml-10 w-22 text-lg hover:bg-gray-400 mt-6 sm:mt-0">Search</button>
+            </form>
+
+        </div>
+
+    </section>
+    <!-- END OF HERO SECTION -->
+
+    <!-- IMPORTING THE FOOTER -->
+    <%- include('./partials/footer.ejs'); %>
+
+
+    <video autoplay muted loop id="myVideo">
+        <source src="images/vid.mp4" type="video/mp4">
+    </video>
+    
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+        <h1 class="text-xl text-white ml-10">DeTour</h1>
+    </div>
+
+    
+    <script src="index.js"></script>
+</body>
+</html>
