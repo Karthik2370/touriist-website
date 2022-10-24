@@ -1,0 +1,287 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+/* START OF HERO */
+#hero{
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 100;
+
+}
+.btn-container{
+    padding-top: 25vh;
+}
+#hero input::placeholder{
+    font-size: 20px;
+}
+#hero input:hover{
+    box-shadow: 5px 5px 15px #000;
+}
+#hero h1{
+    font-family: 'Paytone One', sans-serif;
+    color:white
+}
+#hero p{
+    color:white;
+}
+#footer{
+    position: absolute;
+}
+
+/* END OF HERO */
+
+
+
+
+/* START OF SECOND PAGE */
+#main{
+    /* background: rgb(129,224,216);
+    background: linear-gradient(90deg, rgba(129,224,216,1) 0%, rgba(61,182,199,1) 48%, rgba(6,98,117,1) 100%, rgba(14,196,230,1) 100%); */
+    background:url(../images/bg.jpg) no-repeat;
+    background-size: cover;
+    /* color:white !important */
+}
+#main h1{
+    transition: all 0.5s ease;
+}
+#main h1:hover{
+    color:#CF0A0A;
+}
+
+.map-card img:first-child{
+    width: 325px;
+}
+.map-logo{
+    width: 18px !important;
+    margin-right: 10px;
+}
+.weather-card{
+    width: 200px;
+    box-shadow: 5px 5px 15px #000;
+    cursor: pointer;
+}
+.map-img{
+    box-shadow: 5px 5px 15px #000;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.map-card button{
+    background-color: #3C4048;
+    color:white;
+}
+
+.scroll-logo i{
+    font-size: 35px;
+    animation: updown 1s infinite;
+}
+@keyframes updown{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/* END OF MAIN SECTION */
+
+/* START OF EXPLORE SECTION */
+#explore{
+    background: url(../images/asthetic.jpg) no-repeat;
+    background-size: cover;
+}
+#explore h1{
+    color:#000 !important;
+}
+.food-card{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px #000;
+    transition: all 0.5s;
+}
+.food-card:hover{
+    box-shadow: 15px 15px 20px #000;
+}
+.food-container img{
+    width: 350px;
+    height: 200px;
+}
+.food-card p{
+    position: absolute;
+    top:-15%;
+    color:white;
+    z-index: 5;
+    transition: all 0.5s;
+}
+.food-card::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgba(1,1,1,0.7);
+    z-index: 3;
+}
+.food-card:hover::before{
+    height: 100%;
+    width: 100%;
+}
+.food-card:hover p{
+    top:50%;
+}
+/* END OF MAIN SECTION */
+
+/* START OF ERROR PAGE */
+#error{
+    height: 100vh;
+    background: url(../images/asthetic.jpg) no-repeat;
+    background-size: cover;
+}
+/* END OF ERROR PAGE */
+
+/* LOADING SCREEN ANIMATION */
+body, html {
+    height: 100%;
+    text-align: center;
+}
+
+body {
+  background-color: #242F3F;
+}
+
+.loader-wrapper{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    z-index: 1000;
+    top:0;
+    left:0;
+    background-color: #242f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(180deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  75% {
+    transform: rotate(360deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  
+  25% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 100%;
+  }
+  
+  75% {
+    height: 100%;
+  }
+  
+  100% {
+    height: 0%;
+  }
+}
+/* END OF LOADING SCREEN */
+
+/* START OF CONTACT PAGE */
+#contact{
+    height: 100vh;
+    background: url(../images/asthetic.jpg) no-repeat;
+    background-size: cover;
+}
+/* END OF CONTACT PAGE */
+
+/* START OF ABOUT section */
+
+/* END OF ABOUT SECTION */
+#about{
+    background: url(././images/vision.jpg) no-repeat;
+    background-size: cover;
+}
+.creator-card img{
+    width: 250px;
+    height: 270px;
+    box-shadow: 5px 3px 15px #000;
+}
+.creator-card p:last-child{
+    color:#FDFDBD;
+}
+/* RESPONSIVE WEB DESIGN */
+@media screen and (max-width:640px){
+    video{
+        opacity: 0;
+    }
+    #hero{
+        background: url(images/tourist.jpg) no-repeat;
+        background-size: cover;
+    }
+    #hero input::placeholder{
+        font-size: 15px;
+    }
+    .food-card p{
+        position: relative;
+    }
+    .food-card{
+        box-shadow: 0px 0px 0px #000;
+    }
+    .food-card img{
+        box-shadow: 5px 5px 15px #000;
+    }
+
+}
